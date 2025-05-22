@@ -1,0 +1,21 @@
+[{
+    "name": "Abhi",
+    "age" : 30,
+    "isEmployed" : true,
+    "hobbies" : ["cricket","bgmi","badmintion"]
+},
+
+{
+    "name": "Aaryan",
+    "age" : 20,
+    "isEmployed" : true,
+    "hobbies" : ["cri","cod","tennis"]
+},
+
+{
+    "name": "Saloni",
+    "age" : 25,
+    "isEmployed" : true,
+    "hobbies" : ["shop","candy","kitchen"]
+}
+]

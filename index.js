@@ -1,305 +1,618 @@
-// Ways to print in JavaScript
+// console.log('hello');
 
-//  console.log("hello world");
-// alert("hii , there");
-// document.write("I have wriiten a document")
+// window.alert('Hello!');
 
-// JavaScript Console API
+// document.getElementById("myH1").textContent = 'Hello';
+// we use let over here to define varibales and their values assigned .
 
-// console.log("hello world");
-// console.warn("Warning ahead");
-// console.error("Error ahead"); 
+//     let age = 23;
+// console.log('You are ${age} years old');// use ${varibale-name} to print anything.
 
-// JavaScript Variables 
-var number1 = 56;
-var number2 = 67;
-// console.log(number1 + number2);
+// let x;
+// x = window.prompt('Whats your age'); // takes user input . Always takes string input .
+// console.log(x);
 
-// Data Types in JavaScript
+// // Number() , String() and Boolean() is used to convert to int (numbers) , strings and boolean respectively.
 
-// Numbers
-var num1 = 100;
-var num2 = 345;
+// let r = Number(Math.random());
+// console.log(r);
 
-// Strings
-var str1 = "Hello everyone";
-var str2 = "My name is abhishek";
-// console.log(str1);
+// checked = property that determines the checked state of an html checkbox or radio button element
 
-
-// Objects
-var marks = {
-    abhiii: 89,
-    ravi: 67,
-    aaryan: 98,
-}
-// console.log(marks);
-
-// Booleans
-var a = true;
-var b = false;
-// console.log(a, b);
-
-// Undefined ----- when no value is assign to variable or assigned ad undefined
-// var und=undefined;
-var und;
-// console.log(und)
-
-// Null values ----- when a variable is assigned null to it
-var a = null;
-// console.log(a)
-
-/*
-At a very high level, there are two types of data types in JavaScript
-1. Primitive data types: undefined, null, number, string, boolean, symbol
-2. Reference data types: Arrays and Objects
-*/
-
-var arr = [1, 2.56, "Abhii", true, 5];
-// console.log(arr)
-// console.log(arr[2])
-
-// Operators in JavaScript
-
-// ----Arithmetic Operators-----
-var a = 100;
-var b = 10;
-// console.log("The value of a + b is ", a+b);
-// console.log("The value of a - b is ", a-b);
-// console.log("The value of a * b is ", a*b);
-// console.log("The value of a / b is ", a/b);
-
-// Assignment Operators
-var c = b;
-// c += 2;
-// c -= 2; // c = c - 2;
-// c *= 2;
-// c /= 2;
-// console.log(c);
-
-// Comparison Operators
-var x = 34;
-var y = 56;
-// console.log(x == y);
-// console.log(x >= y);
-// console.log(x <= y);
-// console.log(x > y);
-// console.log(x < y);
-
-// Logical Operators
-
-// Logical and
-// console.log(true && true)
-// console.log(true && false)
-// console.log(false && true)
-// console.log(false && false)
-
-// Logical or
-// console.log(true || true)
-// console.log(true || false)
-// console.log(false || true)
-// console.log(false || false)
-
-// Logical not
-// console.log(!false);
-// console.log(!true);
-
-// Function in JavaScript
-
-function avg(a, b) {
-    c = (a + b) / 2;
-    return c;
-}
-// DRY = Do not repeat yourself
-c1 = avg(4, 6);
-c2 = avg(14, 16);
-// console.log(c1, c2);
-
-// Conditionals in JavaScript
-/*
-var age = 41;
-// Single if statement
-if(age > 18){
-    console.log('You can drink rasna water');
-}
-// if - else statement
-// if(age > 18){
-//     console.log('You can drink rasna water');
-// }
-// else{
-//     console.log('You cannot drink rasna water');
+// let y = document.getElementById(y);
+// if (y.checked) {
+//     console('yes it is checked')
 // }
 
-age = 25;
-// if-else Ladder
-if(age > 32){
-    console.log("You are not a kid");
-}
-else if(age >26){
-    console.log("Bachhe nahi rahe");
-}
-else if(age >22){
-    console.log("Yes Bachhe nahi rahe");
-}
-else if(age >18){
-    console.log("18 Bachhe nahi rahe");
-}
-else{
-    console.log("Bachhe rahe");
-}
-console.log("End of ladder");
-*/
+// let x = "1234567890";
+// x = x.padStart(15, "0");// 000001234567890 . add 5 zeros at the start of string.
+// console.log(x);
 
-// Loops in JavaScript 
-// ------------For loop ----------
+// x = x.slice(0, 5); //12345 . same as substring.
+// x = x.slice(-1); // index starts from end . i.e. from 9 and print 0
 
-var arr = [1, 2, 3, 4, 5, 6, 7];
-// console.log(arr);
-// for(var i=0;i<arr.length;i++){
-//     if(i==2){
-//         // break;
-//         continue;
+// == -> comapres if values are equal
+//     === -> comapres if values & data types are equal
+
+// function add(x, y) {
+//     let result = x + y;
+//     return result;
+// }
+
+// let ans = add(4, 6);
+// console.log(ans);
+
+// let x = [5, 7, 9];
+// console.log(x[1]);
+// x.push(10);//adds 10 at the last
+// x.pop();//removes the last element.
+// x.unshift(2);//adds 2 at the beginning of the array.
+
+// for (let i of x) {
+//     console.log(i);
+// }
+
+// //spread operator(...) = allows an iterable such as an array or string to be expanded into seperate elements(unpacks the elements).
+// let num = [1, 2, 3, 4, 5]; so it will be divided into anothers arrays like['1', '2', '3', '4', '5']
+// let max = Math.max(...num);
+// let min = Math.min(...num);
+// console.log(max, min);
+
+// s = "ABHI"
+// sp = [...s] // ['A','B','H','I'].
+
+// rest(...rest) = bundles seperate elements into an arrays.opp pf spread.
+// function sum(...num) {
+//     let ans = 0;
+//     for (i of num) {
+//         ans += i;
 //     }
-//     console.log(arr[i])
+//     return ans;
 // }
 
-// For-each loop
-// arr.forEach(function(element){
-//     console.log(element);
-// })
-// const ac = 0;
-// ac++;
-// ac = ac +1;
+// const answer = sum(1, 3, 4, 6, 7);
+// console.log(answer);
 
-// while Loop 
-// let j = 0;
-// while(j<arr.length){
-//     console.log(arr[j]);
-//     j ++;
+// callback = function that is passed as an argument to another function, and is executed after the completion of some operation
+// for eg : if we need to display sum result only after getting the vaalues and adding it, we can use it and tell callback to display data when added.
+// function sum(callback, x, y) {
+//     let r = x + y;
+//     callback(r);
+// }
+// function displayR(r) {
+//     console.log(r);
+// }
+// sum(displayR, 4, 8);
+
+// .Map()= accepts a callback and appiles that function to each element of an array and then return a new arrays
+// let x=[1,2,3,4,5];
+// let r=x.map(square);//so map will call square function and will splly same function to each element of x array and  give its sqaure in a new arrays 
+// console.log(r);
+
+// function square(num){
+//     return num*num;
 // }
 
-// Do-while loop 
-// do{
-//     console.log(arr[j]);
-//     j++;
-// } while (j < arr.length);
+// .filter = creates a new array by filtering a new arrays
+// let x=[1,2,3,4,5];
+// let r=x.filter(isEven);//so map will call square function and will splly same function to each element of x array and  give its sqaure in a new arrays 
+// console.log(r);
 
-// Methods in array 
-let myArr = ["Girl", "Boy", 34, null, true];
-// console.log(myArr.length);
-// // myArr.pop();
-// myArr.push("Abhiii")
-//  myArr.shift()
-// const newLen = myArr.unshift("Abhiii")
-// console.log(newLen);
-// console.log(myArr);
-
-// String Methods in JavaScript
-let str3 = "Hello everyone , Abhishek here";
-// console.log(str3.length)
-// console.log(str3.indexOf("good"))
-// console.log(str3.lastIndexOf("good"))
-
-// console.log(str3.slice(1,4))
-d = str3.replace("Abhishek", "Aaryan");
-// d = d.replace("good", "bad");
-// console.log(d, str3)
-
-let myDate = new Date();
-// console.log(myDate);
-// console.log(myDate.getTime());
-// console.log(myDate.getFullYear());
-// console.log(myDate.getDay());
-// console.log(myDate.getMinutes());
-// console.log(myDate.getHours());
-
-// DOM Manipulation
-let elem = document.getElementById('click');
-// console.log(elem);
-let elemCls = document.getElementsByClassName("container");
-// console.log(elemCls);
-// elemClass[0].style.background = "yellow";
-elemCls[0].classList.add("bg-primary")
-elemCls[0].classList.add("text-success")
-
-// console.log(elem.innerHTML);
-// console.log(elem.innerText); 
-
-// console.log(elemCls[0].innerHTML);
-// console.log(elemCls[0].innerText); 
-tn = document.getElementsByTagName('div')
-//   console.log(tn)
-createdElement = document.createElement('p');
-createdElement.innerText = "Hii everyone";
-tn[0].appendChild(createdElement);
-createdElement2 = document.createElement('b');
-createdElement2.innerText = "hello there , bold here !!!";
-tn[0].replaceChild(createdElement2, createdElement);
-// removeChild(element); ---> removes an element
-
-// Selecting using Query
-// sel = document.querySelector('.container')
-// console.log(sel)
-// sel = document.querySelectorAll('.container')
-// console.log(sel)
-
-// function clicked(){
-//     console.log('The button was clicked')
-// }
-// window.onload = function(){
-//     console.log('The document was loaded')
+// function isEven(num){
+//    if (num%2==0)
+//     return true;
+//     else
+//     return false;
 // }
 
-// Events in JavaScript
-// firstContainer.addEventListener('click', function(){
-//     document.querySelectorAll('.container')[1].innerHTML = "<b> We have clicked</b>"
-//     console.log("Clicked on Container")
-// })
+// .reduce = reduce the element of an Array to a single value
 
-// firstContainer.addEventListener('mouseover', function(){
-//     console.log("Mouse on Container")
-// })
+// let num=[1,2,3,4,5];
+// let result=num.reduce(sum);//so map will call square function and will splly same function to each element of x array and  give its sqaure in a new arrays 
+// console.log(result);
 
-// firstContainer.addEventListener('mouseout', function(){
-//     console.log("Mouse out of Container");
-// })
-
-// let prevHTML = document.querySelectorAll('.container')[1].innerHTML;
-// firstContainer.addEventListener('mouseup', function(){
-//     document.querySelectorAll('.container')[1].innerHTML = prevHTML;
-//     console.log("Mouse up when clicked on Container");
-// })
-
-// firstContainer.addEventListener('mousedown', function(){
-//     document.querySelectorAll('.container')[1].innerHTML = "<b> We have clicked</b>"
-//     console.log("Mouse down when clicked on Container");
-// })
-
-// Arrow Functions --- (=> can be used instead of writing funtion ... It can be used to insert a function in between)
-// function summ(a, b){
-//     return a+b;
+// function sum(result,number){ // here x will behave like last element and y will behave like next element .
+//     return result+number; //case1: 1+2=3 , case2:3+2=5 and so on 
 // }
-summ = (a, b) => {
-    return a + b;
+
+// let num=[1,2,3,4,5];
+// let result=num.map(function(element)
+// {
+//         return Math.pow(element,2);
+//  });//basically we are passing function as a argument of a map function. 
+// console.log(result);
+
+// Arrow function : (parameters) => some code 
+// const hello = (x,y) => {console.log('Hello ${x}')
+//                         console.log('You are ${y} years old')};
+
+// hello("Abhi",24);
+
+// const person = {
+//     fname:"abhishek",
+//     lname:"Kumar",
+//     age:24,
+//     isEmployeed:true,
+//     sayHello: ()=> console.log("Hi!there"),
+// }
+// console.log(person.fname);
+// console.log(person.sayHello());
+
+// this : doesn't work with arrow func.
+// const person = {
+//     fname:"abhishek",
+//     lname:"Kumar",
+//     age:24,
+//     isEmployeed:true,
+//     sayHello: function(){console.log('Hi!there ${this.fname}')},
+// }
+// console.log(person.fname);
+// console.log(person.sayHello());
+
+// constructors : we can use constructor keyword too to define it 
+// function person(first, age, eye) {
+//   this.name = first;
+//   this.age = age;
+//   this.eye = eye;
+// }
+// const p1 = new person("abhi",24,"black");
+// console.log(p1.name);
+
+// classes : Use the keyword class to create a class.
+// class Car {
+//   constructor(name, year) {
+//     this.name = name;
+//     this.year = year;
+//   }
+//   displayCar(){
+//     console.log('name and year of car : ${name} of ${year}');
+//   }
+// }
+
+// const myCar1 = new Car("Ford", 2014);
+// const myCar2 = new Car("Audi", 2019);
+
+// myCar1.displayCar();
+
+// static : Static class methods are defined on the class itself. If class name is person , then we can access static lass /varibles using class anme only . eg. person.static_class or person.static_var
+// class Car {
+//   constructor(name) {
+//     this.name = name;
+//   }
+//   static hello(x) {
+//     return "Hello!!" + x.name;
+//   }
+// }
+
+// const obj = new Car("Ford");
+// obj.hello;// this will give error as hello is a static methofd , we need to acess it using class
+// console.log(Car.hello(obj));
+
+// super():The super keyword is used to call the constructor of its parent class to access the parent's properties and methods.
+// class Car {
+//   constructor(brand) {
+//     this.carname = brand;
+//   }
+//   present() {
+//     return 'I have a ' + this.carname;
+//   }
+// }
+
+// class Model extends Car {
+//   constructor(brand, mod) {
+//     super(brand);
+//     this.model = mod;
+//   }
+//   show() {
+//     return this.present() + ', it is a ' + this.model;
+//   }
+// }
+
+// class date extends Car {
+//   constructor(brand, year) {
+//     super(brand);
+//     this.year = year;
+//   }
+//   whatYear() {
+//     return this.present() + ', it is a ' + this.year + ' model car';
+//   }
+// }
+
+// obj = new date("Ford", 2014);
+// console.log(obj.whatYear());
+
+// setter and getter function : set ang get keyword is used . _varname is used to declare private varibale name
+// class R {
+//     constructor(width, height) {
+//         this.width = width;
+//         this.height = height;
+//     }
+
+//     get a() {
+//         return this.width * this.height;
+//     }
+
+//     set a(value) {
+//         console.log("Area cannot be set directly.");
+//     }
+// }
+
+// const rect = new R(10, 5);
+// console.log(rect.a);
+// rect.a = 60;
+
+// // with private propery _balance
+// class B {
+//     _balance; // Private property
+
+//     constructor(balance) {
+//         this._balance = balance;
+//     }
+
+//     get balance() {
+//         return this._balance;
+//     }
+
+//     set balance(amount) {
+//         if (amount < 0) {
+//             console.log("Balance cannot be negative!");
+//         } else {
+//             this._balance = amount;
+//         }
+//     }
+// }
+
+// const acc = new B(1000);
+// console.log(acc.balance);
+// acc.balance = -500;  // "Balance cannot be negative!"
+
+// destructuring = extract values from arrays and objects and then assign them to varibales in a convient way
+                    // [] - for array destructuring
+                    // {} - for object destructuring
+
+//let x=1;
+// let y=2;
+// [x,y]=[y,x];
+// console.log(x,y);
+
+// let a=[15,25,67,89,78];
+// [a[0],a[4]] = [a[4],a[0]];
+// console.log(a);
+
+// const person ={
+//     fname:"ABhi",
+//     lname:"Kumar",
+//     age:24,
+// }
+
+// const person2 ={
+//     fname:"Aaryan",
+//     lname:"Kumar",
+//     age:20,
+//     job:true,
+// }
+
+// const {fname,lname,age,job=false}=person;
+// console.log(fname,lname,age);
+
+// nested objects:
+// const person ={
+//     fname:"Abhi",
+//     lname:"Kumar",
+//     age:24,
+//     address : {
+//         street : "rajiv nagar",
+//         city : "Patna",
+//         state: "Bihar",
+//     }
+// }
+// console.log(person.fname);
+// console.log(person.lname);
+// console.log(person.age);
+// console.log(person.address.state);
+
+
+// .sort = sort elements in lexicographic order 
+//  let a=[3,10,6,8,1,9,5];
+//  a.sort((a,b) => a-b);//sort in icreasing order
+//  a.sort((a,b) => b-a);//sort in revsrse order
+//  console.log(a);
+
+// synchronous = executes line by line consecutively in a sequential manner . Code that wait for an opeartion to complete
+
+// asynchronous = allow multiple operation to be perfomed simultaneously . eg- I/O operation , network requests , fetching data )
+                  //handles with : callbacks , promises , Async/Await
+
+// setTimeout(() => console.log("Task 1"),3000);
+
+// console.log("Task 2");
+// console.log("Task 3");
+// console.log("Task 4");
+
+//DOM = The Document Object Model (DOM) is the data representation of the objects that comprise the structure and content of a document on the web. 
+        // the DOM represents an HTML document in memory and how to use APIs to create web content and applications.
+
+// const x = document.getElementById("section1");
+// console.log(x);
+
+// const x = document.getElementsByClassName("container")
+// console.log(x);
+
+// const x = document.getElementsByTagName("h1");
+// console.log(x);
+
+// const x = document.querySelector(.container);// gives first element or null
+// console.log(x);
+
+// const x = document.querySelectorAll(.container);// gives nodelist of all first element
+// console.log(x);
+
+// const p = document.getElementById("myP");
+
+// function changecolor(event){
+//     event.target.style.backgroundVolor = "tomato";
+// }
+// p.addEventListener("click",changecolor);
+
+// Nodelist = static collection of html elements by (id,class,element)
+            // Can be created by using QuerySelectorAll()
+            // Silimar to array bit doesn't have map , filter, reduce.
+            // It wont update automatically reflect changes 
+
+// let buttons = document.querySelectorAll(".mybtns");
+// buttons.forEach(button =>{
+//     button.style.backgroundColor="green";
+//     button.textContent+="i";
+// })
+
+// buttons.forEach(button =>{
+//     button.addEventListner("mouseover",event => {
+//         event.textContent+='n';
+//     })
+// })
+
+// add an Element
+// const newButton = document.createElement("button");
+// newButton.textContent="Button 5";
+// newButton.classList="mybtns";
+// document.body.appendChild(newButton);
+// buttons = document.querySelectorAll(".mybtns");//have to explicity add same class as others as to be added into nodelist.
+// console.log(buttons);
+
+//classList = it is used to interact with an element's list of classes .
+// we can add / remove etc using this . Ig we have to addd hover or enbaled class to js , we ca use classlist element to add here direclty .
+
+// let buttons = document.querySelectorAll(".mybtns");
+// buttons.addEventListner("mouseover" ,event =>{
+//     event.target.classList.toggle("hover");
+// })
+// or we can directly add using classlist prop
+// let buttons = document.querySelectorAll(".mybtns");
+// buttons.forEach(button =>{
+//     button.classList.add("enabled");
+// })
+
+// callback hell = situation in js where callbacks are nested within other callbacks to the degree where the code is difficult to read.
+                //    Old patterns to handle asynnchronous functions.
+                //    Uses promises + async/await to avoid callback Hell.
+
+//Promise = an obj. that manges asynchronous operations. Wrap a Promise obj. around {asynchronous code}
+//          "I promise to return a value " . PENDING -> RESOLVED or REJECTED 
+//           new Promise ((resolve,reject) => {asynchronous code})
+
+/*
+function fetchData() {
+    //commenting to handle callback hell and return promise obj.
+    // setTimeout(() =>{
+    //     console.log('Data fetched');
+    //     callback();
+    // },1500);   
+
+    return new Promise((resolve,reject) =>{
+        setTimeout(() =>{
+            const datafetched = true;
+            if(datafetched){
+                resolve('Data fetched');
+            }
+            else{
+                reject("Data not fetched");
+            }
+        
+    },1500);  
+    })
+
 }
 
-logKaro = () => {
-    document.querySelectorAll('.container')[1].innerHTML = "<b> Set interval executed</b>"
-    console.log("Hello,overhere !!!!")
+function processData() {
+    // setTimeout(() =>{
+    //     console.log('Data processed');
+    //     callback();
+    // },2500);  
+ return new Promise((resolve,reject) =>{
+        setTimeout(() =>{
+            const dataprocessed = true;
+            if(dataprocessed){
+                resolve('Data processed');
+            }
+            else{
+                reject("Data not processed");
+            }
+        
+    },2500);  
+    })
 }
-// SetTimeout and setinterval
-//  clr = setTimeout(logKaro, 2000);
-//  clr = setInterval(logKaro, 2000);
-// use clearInterval(clr)/clearTimeout(clr) to cancel setInterval/setTimeout
 
-// JavaScript localStorage
-// localStorage.setItem('name', 'Abhishek') 
-// localStorage.getItem('name')
-// localStorage.removeItem('name')
-// localStorage.clear();
+function displayData() {
+//    setTimeout(() =>{
+//         console.log('Data displayed');
+//         callback();
+//     },500);  
 
+     return new Promise((resolve,reject) =>{
+        setTimeout(() =>{
+            const datadisplayed = true;
+            if(datadisplayed){
+                resolve('Data displayed');
+            }
+            else{
+                reject("Data not displayed");
+            }
+        
+    },1500);  
+    })
+}
 
-// Template literals - Backticks
-a = 34;
-b = 67;
-console.log(`this is my ${a} + ${b}`)
+// Callback Hell 
+// fetchData(() => {
+//     processData(() =>{
+//         displayData(() => console.log("All done!"));
+//     });
+// });
+
+// fetchData().then(value => console.log(value));
+// processData().then(value => console.log(value));
+// displayData().then(value => console.log(value));
+
+// or we will use method chaining to call above function and handle callback hell.
+fetchData().then(value => {console.log(value); return processData()})
+            .then(value => {console.log(value); return displayData()})
+            .then(value => {console.log(value); console.log("All done!")})
+            .catch(error => console.error(error));
+*/
+
+//  Async = makes a function return a promise.
+//  Await = makes an async func. wait for a promise.
+//  Allows uh to write asynchronous code in synchronous manner.
+//  async doesn't have resolve or reject parametrs and everything after await is placed in an event queue.
+
+/*
+function fetchData() { 
+
+    return new Promise((resolve,reject) =>{
+        setTimeout(() =>{
+            const datafetched = true;
+            if(datafetched){
+                resolve('Data fetched');
+            }
+            else{
+                reject("Data not fetched");
+            }
+        
+    },1500);  
+    })
+
+}
+
+function processData() {
+ return new Promise((resolve,reject) =>{
+        setTimeout(() =>{
+            const dataprocessed = true;
+            if(dataprocessed){
+                resolve('Data processed');
+            }
+            else{
+                reject("Data not processed");
+            }
+        
+    },2500);  
+    })
+}
+
+function displayData() {
+
+     return new Promise((resolve,reject) =>{
+        setTimeout(() =>{
+            const datadisplayed = true;
+            if(datadisplayed){
+                resolve('Data displayed');
+            }
+            else{
+                reject("Data not displayed");
+            }
+        
+    },1500);  
+    })
+}
+// commenting as we will introduce a async function in which we will add code in synchronous manner .
+// fetchData().then(value => {console.log(value); return processData()})
+//             .then(value => {console.log(value); return displayData()})
+//             .then(value => {console.log(value); console.log("All done!")})
+//             .catch(error => console.error(error));
+
+async function doThings() {
+    const fetchDataRslt = await fetchData();
+    console.log(fetchDataRslt);
+
+     const processDataRslt = await fetchData();
+    console.log(processDataRslt);
+
+     const displayDataRslt = await fetchData();
+    console.log(displayDataRslt);
+
+    console.log("All done !");
+}
+
+doThings();
+*/
+
+// JSON = (JavaScript Object Notaation) data-interchange fromat.
+            // Used for exchanging data b/w server and a web application.
+            // JSON file as an obj. ({key:value}) or an array ([val1,val2,va3])
+            // JSON.stringify() = converts a JS obj. to a JSON string.
+            // JSON.parse() = converts a JSON string to a JS object.
+
+// const names = ["Abhi","Aaryan","Ayush","Saloni"];
+// const jsonString = JSON.stringify(names);
+// console.log(jsonString);
+
+// const people = [{
+//     "name": "Abhi",
+//     "age" : 30,
+//     "isEmployed" : true,
+//     "hobbies" : ["cricket","bgmi","badmintion"]
+// },
+
+// {
+//     "name": "Aaryan",
+//     "age" : 20,
+//     "isEmployed" : true,
+//     "hobbies" : ["cri","cod","tennis"]
+// },
+
+// {
+//     "name": "Saloni",
+//     "age" : 25,
+//     "isEmployed" : true,
+//     "hobbies" : ["shop","candy","kitchen"]
+// }
+// ]
+// const jsonString = JSON.stringify(people);
+// console.log(jsonString);
+
+// const person = {
+//     "name": "Abhi",
+//     "age" : 30,
+//     "isEmployed" : true,
+//     "hobbies" : ["cricket","bgmi","badmintion"]};
+// const jsonString = JSON.stringify(person);
+// console.log(jsonString);
+
+// const jsonNames ='["Abhi","Aaryan","Ayush","Saloni"]';
+// const json = JSON.parse(jsonNames);
+// console.log(json);
+
+//Fetch = The fetch() function in JavaScript is a modern API for making network requests.
+        // It can fetch various resources like JSON data, HTML, images, and more from a server. 
+// basic syntax = fetch(url, options)
+                // .then(response => response.json())
+                // .then(data => console.log(data))
+                // .catch(error => console.error('Error:', error));
+
+//to fetch any json file .it return a promise.
+// fetch("people.json")
+//     .then(response => response.json())
+//     .then(value => console.log(value))
+
+fetch("https://pokeapi.co/api/v2/pokemon/ditto")
+      .then(response => (console.log(response)))
+      .catch(error => console.log(error));
